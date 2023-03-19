@@ -1,7 +1,7 @@
 {
     "manifest_version": 4,
     "version": "2.0",
-    "name": "Leads Manager",
+    "name": "Lead Manager",
     "action": {
         "default_popup": "index.html",
         "default_icon": "icon.png"
