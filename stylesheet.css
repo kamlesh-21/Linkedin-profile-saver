@@ -4,6 +4,99 @@ body{
     padding: 5px;
     padding-right: 5px;
     min-width: 400px;
+  }
+  
+  #customer-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: solid 1px #055087;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  #tab-box {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border: solid 1px #055087;
+    border-radius: 5px;
+    padding: 8px;
+    background: #055087;
+  }
+  
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  #input-two {
+    width: 63%;
+  }
+  
+  #hash {
+    color: white;
+    background-color: #055087;
+    padding: 12px 20px;
+    margin-top: 5px;
+    border: none;
+    font-weight: bold;
+  }
+  
+ button {
+    background: #4b7da0;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #055087;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  #delete-btn {
+    background: rgb(255, 255, 255);
+    color: red;
+  }
+  
+  ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-top: 5px;
+  }
+  
+  a {
+    color: blue;
+  }
+  
+  .remove-span {
+    display: inline-block;
+    color: #df857d;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .remove-span:hover {
+    color: #fc1904;
+  }
+  
+
+
+
+/* 
+body{
+    margin: 0;
+    padding: 5px;
+    padding-right: 5px;
+    min-width: 400px;
 }
 
 input {
@@ -73,4 +166,4 @@ a {
   
   .remove-span:hover {
     color: #fc1904;
-  }
+  } */

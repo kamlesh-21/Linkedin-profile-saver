@@ -48,7 +48,7 @@ function render(leads) {
     inputTwo.value = ""
 
     // add event listener to each remove button
-    const removeBtns = document.querySelectorAll(".remove-btn")
+    const removeBtns = document.querySelectorAll(".remove-span")
     removeBtns.forEach(removeBtn => {
         removeBtn.addEventListener("click", function() {
             const index = this.dataset.index
