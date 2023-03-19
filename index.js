@@ -33,27 +33,30 @@ saveBtn.addEventListener("click", function(){
 
 //function to display entries
 function render(leads) {
-    //creating local variable to store values for display & to avoid DOM manipulation on every loop
     let listItems = ""
-    //let listItems = JSON.stringify(leads)
-    //looping through the parameter's length and appneding it in local variable with list tags 
-    for (let i=0; i<leads.length; i++) {
-    //for (let x in leads) {
 
+    for (let i = 0; i < leads.length; i++) {
         listItems += `
         <li>
-            <a href=
-                ${(leads[i].url)} target="_blank"> ${(leads[i].url)} 
-            </a>
-             - ${(leads[i].type)} 
+            <a href="${leads[i].url}" target="_blank">${leads[i].url}</a>
+            - ${leads[i].type}
+            <span class="remove-span" data-index="${i}">Remove</span>
         </li>`
-        
-        }
-    //changing the UL element with local variable in HTML form
-   
+    }
+
     ulEl.innerHTML = listItems
     inputTwo.value = ""
-    
+
+    // add event listener to each remove button
+    const removeBtns = document.querySelectorAll(".remove-btn")
+    removeBtns.forEach(removeBtn => {
+        removeBtn.addEventListener("click", function() {
+            const index = this.dataset.index
+            myLeads.splice(index, 1)
+            localStorage.setItem("myLeads", JSON.stringify(myLeads))
+            render(myLeads)
+        })
+    })
 }
 
 
@@ -61,13 +64,6 @@ function render(leads) {
 deleteBtn.addEventListener("dblclick", function(){
     localStorage.clear()
     myLeads = []
-    render(myLeads)
-})
-
-removeBtn.addEventListener("click", function(){
-    localStorage.clear()
-    myLeads.pop()
-    localStorage.setItem('myLeads',JSON.stringify(myLeads));
     render(myLeads)
 })
 
@@ -87,4 +83,3 @@ inputBtn.addEventListener("click", function(){
     //calling function to display saved inputs
     render(myLeads)
 })
-

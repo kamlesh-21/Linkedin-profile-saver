@@ -61,3 +61,16 @@ li {
 a {
     color: blue;
 }
+
+.remove-span {
+    display: inline-block;
+    color: #df857d;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .remove-span:hover {
+    color: #fc1904;
+  }
